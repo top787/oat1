@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Conversor Real para Dólar</title>
+</head>
+<body>
+
+    <h2>Conversor de Real (R$) para Dólar (US$)</h2>
+
+    <label>Digite o valor em reais (R$):</label><br><br>
+    <input type="number" id="valorReal" placeholder="Ex: 100"><br><br>
+
+    <button onclick="converter()">Converter</button>
+
+    <h3 id="resultado"></h3>
+
+    <script>
+        function converter() {
+            let real = document.getElementById("valorReal").value;
+            let cotacao = 5.30;
+
+            let dolar = real / cotacao;
+
+            document.getElementById("resultado").innerText = 
+                "Valor em dólar: US$ " + dolar.toFixed(2);
+        }
+    </script>
+
+</body>
+</html>
